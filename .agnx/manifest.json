@@ -1,0 +1,42 @@
+{
+  "id": "yingce",
+  "name": "影策",
+  "version": "0.1.0",
+  "description": "影策（open-ai-canvas）整仓：backend:8080 + web:3000 Guest 满铺嵌入。一期 SQLite 最小集，不启 yingce-agent/Docker/全量 plugin。",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./web/public/logo.svg",
+  "platforms": {
+    "desktop": "supported",
+    "web": "partial",
+    "mobile": "unsupported"
+  },
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-yingce.mjs",
+    "stateFile": "yingce.json",
+    "defaultPort": 3000
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "capabilities": ["cookies"],
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "yingce.open",
+        "title": "影策"
+      }
+    ],
+    "panels": [
+      {
+        "id": "yingce.main",
+        "title": "影策"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "appId": "yingce",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/ddcat-ai/open-ai-canvas"
+  },
+  "updatedAt": "2026-10-22T21:11:47.000Z"
+}
